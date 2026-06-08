@@ -1,0 +1,30 @@
+# SynBio 2026 GFP design — Python dependencies (ML pipeline, Stages 1–2)
+# Pinned to lower bounds known to work; pin exact versions before publication.
+
+# --- core ---
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+
+# --- I/O ---
+openpyxl>=3.1          # read GFP_data.xlsx
+biopython>=1.81        # sequence handling / FASTA
+
+# --- machine learning ---
+scikit-learn>=1.3
+xgboost>=2.0
+
+# --- plotting / notebooks ---
+matplotlib>=3.7
+jupyter>=1.0
+tqdm>=4.65
+
+# --- optional: SHAP analysis in notebooks (not required for the pipeline) ---
+# shap>=0.43
+
+# --- optional: ESM-2 pseudo-log-likelihood rescoring (~1–2 GB; only if --w-esm > 0) ---
+# torch>=2.1
+# fair-esm>=2.0.0
+
+# NOTE: MD (AmberTools/AMBER) is an external scientific package and is NOT
+# installable via pip. See docs/ for the MD workflow.

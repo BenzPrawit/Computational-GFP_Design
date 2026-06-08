@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite it as below."
+title: "SynBio 2026 — Computational GFP Design (ML → AlphaFold → AMBER MD)"
+abstract: >-
+  A reproducible computational pipeline for designing and prioritising green
+  fluorescent protein (GFP) variants for the SynBio 2026 Challenge, combining a
+  machine-learning sequence-function model with structural and physics-based
+  validation (AlphaFold 3 and AMBER molecular dynamics with a high-temperature
+  thermostability stress test). All outputs are computational predictions and
+  require experimental validation.
+type: software
+authors:
+  - given-names: Prawit
+    family-names: Thitayanuwat
+    email: prawit.tht@student.mahidol.ac.th
+    # Alternative institutional email: prawit.tht@student.mahidol.edu
+    # Personal email: pwttynwt.8@gmail.com
+    orcid: "https://orcid.org/0009-0009-7209-541X"
+    affiliation: "Mahidol University"
+version: "0.1.0"
+date-released: "2026-06-07"
+license: MIT
+keywords:
+  - green fluorescent protein
+  - GFP
+  - protein design
+  - machine learning
+  - AlphaFold
+  - molecular dynamics
+  - AMBER
+  - thermostability
+  - synthetic biology
+# repository-code: "https://github.com/USERNAME/REPО"   # TODO: add repo URL

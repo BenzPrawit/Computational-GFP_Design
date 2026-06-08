@@ -1,0 +1,31 @@
+name: synbio2026-gfp
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python>=3.10
+  # core
+  - pandas>=2.0
+  - numpy>=1.24
+  - scipy>=1.10
+  # I/O
+  - openpyxl>=3.1
+  - biopython>=1.81
+  # machine learning
+  - scikit-learn>=1.3
+  - py-xgboost>=2.0
+  # plotting / notebooks
+  - matplotlib>=3.7
+  - jupyterlab
+  - tqdm>=4.65
+  # optional analysis tools (uncomment as needed)
+  # - shap>=0.43
+  # AmberTools for MD prep/analysis (optional, large):
+  # - ambertools>=23
+  - pip
+  - pip:
+      # optional ESM-2 rescoring (~1–2 GB); uncomment to enable
+      # - torch>=2.1
+      # - fair-esm>=2.0.0
+      []
+# NOTE: AlphaFold 3 is external and not provided by this env.
