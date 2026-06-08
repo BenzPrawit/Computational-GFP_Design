@@ -1,0 +1,10 @@
+parm stripped.addWAT.top
+trajin sum_MD.nc
+
+# Hydrogen bond analysis — protein-ligand system
+# dist 3.5 A = donor-acceptor distance cutoff
+# angle 120.0 = minimum donor-H-acceptor angle
+
+hbond :1-299 donormask :64 acceptormask :1-299 dist 3.5 angle 120.0 out nhb_64.dat avgout avghb_64.dat
+
+go

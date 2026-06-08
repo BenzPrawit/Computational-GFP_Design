@@ -1,0 +1,14 @@
+#!/bin/bash
+
+source leaprc.xFPchromophores              # Load GFP force field for ORC
+source leaprc.protein.ff19SB               # Load ff19SB force field for protein
+
+w = loadpdb protein.pdb                    # Load the PDB structure (after hydrogen minimization)
+
+check w
+charge w
+
+savepdb w complex_addH.pdb                          # Save the hydrogen-added structure as PDB
+saveamberparm w complex_addH.top complex_addH.crd   # Save the hydrogen-added structure as PDB
+
+quit                                       # Exit tleap

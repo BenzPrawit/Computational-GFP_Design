@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#Edit file before run cpptraj.job
+
+cpptraj -i sumtotal.in > sumtotal.out
+
+cpptraj -i sumMD-rms.in  > sumMD-rms.out
+
+cpptraj -i rmsd.in > rmsd.out
+
+cpptraj -i rmsf.in > rmsf.out
+
+cpptraj -i run-Last-PDB.in > run-Last-PDB.out
+
+cpptraj -i hbond.in > hbond.out
+
+cpptraj -i contact_5.in > contact_5.out
+
+cpptraj -i radgyr.in > radgyr.out
+
+cpptraj -i distance.in > distance.out 

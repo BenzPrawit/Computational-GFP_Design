@@ -1,0 +1,14 @@
+#!/bin/bash
+
+cp min_all.restrt complex_ini.rst7
+
+old=ini
+
+for name in min1 min2 min3 min4 heat eq1 eq2 eq3 eq4 ; do
+
+ $PMEMDHOME/bin/pmemd.cuda -O -i $name.i -o complex_$name.mdout -p addWAT.top -c complex_$old.rst7 \
+ -ref min_all.restrt -x complex_$name.nc -r complex_$name.rst7 -inf complex_$name.mdinfo
+  old=$name
+
+done
+

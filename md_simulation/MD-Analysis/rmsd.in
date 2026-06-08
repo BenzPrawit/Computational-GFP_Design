@@ -1,0 +1,18 @@
+parm stripped.addWAT.top
+trajin sum_MD.nc
+
+# Center, image and align trajectory
+center :1-299 mass origin
+image origin center
+autoimage familiar
+
+# Reference structure for RMSD calculation
+reference ref-complex.rst7
+
+# RMSD calculations — all written to separate output files for clarity
+rms reference :1-299                    out rmsd_complex.dat          # Whole complex
+rms reference :1-63,65-299              out rmsd_protein.dat          # Protein only
+rms reference :64                       out rmsd_ligand.dat           # Ligand only
+rms reference :1-63,65-299@CA,C,O,N     out rmsd_backbone.dat         # Backbone only
+
+go

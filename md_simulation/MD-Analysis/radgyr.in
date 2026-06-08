@@ -1,0 +1,21 @@
+# =============================================================
+# radgyr.in — Radius of gyration (Rg) analysis
+# Run: cpptraj -i radgyr.in
+# Consistent with sumtotal.in / rmsd.in workflow
+#   topology  : stripped.addWAT.top   (water/ions stripped)
+#   trajectory: sum_MD.nc             (combined production)
+#   protein = :1-301, ligand = :302, complex = :1-302
+# =============================================================
+
+parm stripped.addWAT.top
+trajin sum_MD.nc
+
+# Make molecules whole before measuring Rg (PBC artifacts ruin Rg)
+autoimage
+
+# Mass-weighted radius of gyration
+radgyr Rg_complex       :1-299                 out rgyr_complex.dat   mass   # whole complex
+radgyr Rg_backbone      :1-63,65-299@CA,C,N,O  out rgyr_backbone.dat  mass   # protein backbone
+radgyr Rg_chromophore   :64                    out rgyr_chro.dat    mass   # ligand only
+
+run

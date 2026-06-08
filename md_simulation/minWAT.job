@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# --- Minimize water only ---
+mpirun -np 16 pmemd.MPI -O \
+  -i minWAT.in -o minWAT.out \
+  -p addWAT.top -c addWAT.crd \
+  -r minWAT.restrt -ref addWAT.crd

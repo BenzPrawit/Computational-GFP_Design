@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sander -O -i min_H.in -o min_H.out -p complex_addH.top -c complex_addH.crd -r complex_minH.restrt -ref complex_addH.crd

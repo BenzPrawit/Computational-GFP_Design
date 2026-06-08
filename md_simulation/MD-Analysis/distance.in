@@ -1,0 +1,6 @@
+parm stripped.addWAT.top
+trajin sum_MD.nc
+
+distance :64@OH :145@ND1 out d_CRO-HIS.dat
+
+go

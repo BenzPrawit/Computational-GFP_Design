@@ -1,0 +1,28 @@
+#!/bin/bash
+
+old=eq4
+
+for name in md1 md2 md3 md4 md5 md6 md7 md8 md9 md10 md11 md12 md13 md14 md15 md16 md17 md18 md19 md20 md21 md22 md23 md24 md25 md26 md27 md28 md29 md30 \
+md31 md32 md33 md34 md35 md36 md37 md38 md39 md40 md41 md42 md43 md44 md45 md46 md47 md48 md49 md50 md51 md52 md53 md54 md55 md56 md57 md58 md59 md60 md61 \ 
+md62 md63 md64 md65 md66 md67 md68 md69 md70 md71 md72 md73 md74 md75 md76 md77 md78 md79 md80 md81 md82 md83 md84 md85 md86 md87 md88 md89 md90 md91 md92 \
+md93 md94 md95 md96 md97 md98 md99 md100 md101 md102 md103 md104 md105 md106 md107 md108 md109 md110 md111 md112 md113 md114 md115 md116 md117 md118 md119 \
+md120 md121 md122 md123 md124 md125 md126 md127 md128 md129 md130 md131 md132 md133 md134 md135 md136 md137 md138 md139 md140 md141 md142 md143 md144 md145 \
+md146 md147 md148 md149 md150 md151 md152 md153 md154 md155 md156 md157 md158 md159 md160 md161 md162 md163 md164 md165 md166 md167 md168 md169 md170 md171 \
+md172 md173 md174 md175 md176 md177 md178 md179 md180 md181 md182 md183 md184 md185 md186 md187 md188 md189 md190 md191 md192 md193 md194 md195 md196 md197 \
+md198 md199 md200 md201 md202 md203 md204 md205 md206 md207 md208 md209 md210 md211 md212 md213 md214 md215 md216 md217 md218 md219 md220 md221 md222 md223 \
+md224 md225 md226 md227 md228 md229 md230 md231 md232 md233 md234 md235 md236 md237 md238 md239 md240 md241 md242 md243 md244 md245 md246 md247 md248 md249 \
+md250 md251 md252 md253 md254 md255 md256 md257 md258 md259 md260 md261 md262 md263 md264 md265 md266 md267 md268 md269 md270 md271 md272 md273 md274 md275 \
+md276 md277 md278 md279 md280 md281 md282 md283 md284 md285 md286 md287 md288 md289 md290 md291 md292 md293 md294 md295 md296 md297 md298 md299 md300 md301 \
+md302 md303 md304 md305 md306 md307 md308 md309 md310 md311 md312 md313 md314 md315 md316 md317 md318 md319 md320 md321 md322 md323 md324 md325 md326 md327 \
+md328 md329 md330 md331 md332 md333 md334 md335 md336 md337 md338 md339 md340 md341 md342 md343 md344 md345 md346 md347 md348 md349 md350 md351 md352 md353 \
+md354 md355 md356 md357 md358 md359 md360 md361 md362 md363 md364 md365 md366 md367 md368 md369 md370 md371 md372 md373 md374 md375 md376 md377 md378 md379 \
+md380 md381 md382 md383 md384 md385 md386 md387 md388 md389 md390 md391 md392 md393 md394 md395 md396 md397 md398 md399 md400 md401 md402 md403 md404 md405 \
+md406 md407 md408 md409 md410 md411 md412 md413 md414 md415 md416 md417 md418 md419 md420 md421 md422 md423 md424 md425 md426 md427 md428 md429 md430 md431 \
+md432 md433 md434 md435 md436 md437 md438 md439 md440 md441 md442 md443 md444 md445 md446 md447 md448 md449 md450 md451 md452 md453 md454 md455 md456 md457 \
+md458 md459 md460 md461 md462 md463 md464 md465 md466 md467 md468 md469 md470 md471 md472 md473 md474 md475 md476 md477 md478 md479 md480 md481 md482 md483 \
+md484 md485 md486 md487 md488 md489 md490 md491 md492 md493 md494 md495 md496 md497 md498 md499 md500 ; do
+
+ $PMEMDHOME/bin/pmemd.cuda -O -i md.i -o complex_$name.mdout -p addWAT.top -c complex_$old.rst7 \
+ -ref min_all.restrt -x complex_$name.nc -r complex_$name.rst7 -inf complex_$name.mdinfo
+ old=$name
+ done

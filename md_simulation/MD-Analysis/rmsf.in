@@ -1,0 +1,19 @@
+parm stripped.addWAT.top
+trajin sum_MD.nc
+
+reference ref-complex.rst7 [ref]
+
+# Image and align trajectory to reference
+autoimage
+rms reference [ref] @C,CA,N
+
+# RMSF per residue — backbone atoms only
+atomicfluct out rmsf_byres.dat       @C,CA,N byres
+
+# B-factor per residue (for VMD/PyMOL visualization)
+atomicfluct out rmsf_byres_Bfac.dat  @C,CA,N byres   bfactor
+
+# B-factor per atom
+atomicfluct out rmsf_byatom_Bfac.dat @C,CA,N byatom  bfactor
+
+go

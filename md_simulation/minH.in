@@ -1,0 +1,112 @@
+steps of minimization only H atoms
+ &cntrl
+ imin=1,maxcyc=3000,
+ ncyc=1000
+ cut=12.0,
+ ntpr=5,
+ ntb=0,ibelly=1,
+ &end
+group input:select H
+FIND
+*   H    *   *
+SEARCH
+RES 1 237 
+FIND
+*   HO   *   *
+SEARCH
+RES 1 237 
+FIND
+*   HS   *   *
+SEARCH
+RES 1 237 
+FIND
+*   HC   *   *
+SEARCH
+RES 1 237
+FIND
+*   H1   *   *
+SEARCH
+RES 1 237 
+FIND
+*   H2   *   *
+SEARCH
+RES 1 237
+FIND
+*   H3   *   *
+SEARCH
+RES 1 237 
+FIND
+*   HP   *   *
+SEARCH
+RES 1 237
+FIND
+*   HA   *   *
+SEARCH
+RES 1 237
+FIND
+*   H4   *   *
+SEARCH
+RES 1 237
+FIND
+*   H5   *   *
+SEARCH
+RES 1 237 
+FIND
+*   HA1   *   *
+SEARCH
+RES 1 237 
+FIND
+*  HA2  *    *
+SEARCH
+RES 1 237
+FIND
+*  HG1  *    *
+SEARCH
+RES 1 237
+FIND
+*  HG2  *    *
+SEARCH
+RES 1 237
+FIND
+*  HG3  *    *
+SEARCH
+RES 1 237
+FIND
+*  HG4  *    *
+SEARCH
+RES 1 237
+FIND
+*  HB2  *    *
+SEARCH
+RES 1 237
+FIND
+*  HB  *    *
+SEARCH
+RES 1 237
+FIND
+*  H2O  *    *
+SEARCH
+RES 1 237
+FIND
+*  H3O  *    *
+SEARCH
+RES 1 237
+FIND
+*  HG3  *    *
+SEARCH
+RES 1 237
+FIND
+*  H6O  *    *
+SEARCH
+RES 1 237
+FIND
+*  H61  *    *
+SEARCH
+RES 1 237
+FIND
+*  H62  *    *
+SEARCH
+RES 1 237
+END
+END
+

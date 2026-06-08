@@ -1,0 +1,14 @@
+Minimizatrion of water molecules ---Fixing Enzyme---
+ &cntrl
+ imin   = 1,
+ maxcyc = 3000,
+ ncyc   = 1500,
+ ntb    = 1,
+ ntr    = 0,
+ cut    = 12
+ /
+Hold the ENZYME fixed
+500.0
+END
+END
+

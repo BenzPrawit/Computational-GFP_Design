@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# --- Minimize everything ---
+mpirun -np 16 $PMEMDHOME/bin/pmemd.MPI -O \
+  -i minALL.in -o minALL.out \
+  -p addWAT.top -c minWAT.restrt \
+  -r min_all.restrt -ref minWAT.restrt

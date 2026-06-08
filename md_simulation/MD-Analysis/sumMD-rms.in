@@ -1,0 +1,18 @@
+#Read in the trajectory file
+# starting at 1
+# 100 total snapshots
+# consider each one
+
+parm stripped.addWAT.top
+
+trajin sum_MD.nc 1 50000 10
+
+#reference ../../3MD_run_newest/3U1I_minALL.crd
+#strip :WAT,Na+ outprefix stripped
+center origin :1-299
+image origin center familiar
+
+trajout Visual-VMD.nc
+
+go
+

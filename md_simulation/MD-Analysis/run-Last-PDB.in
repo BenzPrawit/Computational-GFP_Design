@@ -1,0 +1,16 @@
+parm stripped.addWAT.top
+
+# Extract only the last frame of the trajectory as a PDB file
+trajin sum_MD.nc 50000 50000 1
+
+reference sum_MD.nc 1
+
+# Center, image and align to first frame
+center :1-299 mass origin
+autoimage
+rms reference :1-299@CA,C,N
+
+# Write last frame as PDB
+trajout Last-NS.pdb
+
+go

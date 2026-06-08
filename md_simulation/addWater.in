@@ -1,0 +1,20 @@
+#!/bin/bash
+
+source leaprc.xFPchromophores              # Load GFP force field for ORC
+source leaprc.protein.ff19SB               # Load ff19SB force field for protein
+source leaprc.water.opc                    # Load OPC water model (For ff19SB — recommended)
+
+set default PBradii mbondi3                # Set atomic radii for MM-PBSA free energy calculations
+
+w = loadpdb minH.pdb                       # Load the PDB structure (after hydrogen minimization)
+
+addIons w Na+ 4                            # Add 1 Na+ ion to the system
+solvateoct w OPCBOX 13.0                   # Solvate the system in a truncated octahedron water box 12.0 A buffer between solute and box edge
+
+check w
+charge w
+
+savepdb w addWAT.pdb                       # Save solvated structure as PDB for visual inspection
+saveamberparm w addWAT.top addWAT.crd      # Save AMBER topology (.top) and coordinate (.crd) files. These two files are the main input for all AMBER simulations
+
+quit                                       # Exit tleap

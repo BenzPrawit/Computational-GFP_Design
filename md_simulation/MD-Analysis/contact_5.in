@@ -1,0 +1,18 @@
+parm stripped.addWAT.top
+trajin sum_MD.nc
+
+autoimage
+reference ref-complex.rst7
+
+# Native contacts between ligand (:302) and protein (:1-301)
+# distance 5.0 A cutoff, excluding hydrogens
+# writecontacts — per-contact list, out — contact count per frame
+
+nativecontacts :64&!@H= :1-63,65-299&!@H= \
+  writecontacts contacts_5.dat \
+  out numcontacts_5.dat \
+  reference distance 5.0 \
+  mindist maxdist \
+  contactpdb contact_5.pdb
+
+run
