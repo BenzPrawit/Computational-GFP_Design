@@ -144,7 +144,7 @@ These stages are documented step-by-step in:
 
 The AMBER input decks in `md_simulation/` follow the order:
 `min* → heat → eq1…eq4 → md` (production), with the high-temperature stress run
-targeting **352.15 K (79 °C)**. Trajectory analysis scripts (RMSD, RMSF, Rg,
+targeting **345.15 K (72 °C)**. Trajectory analysis scripts (RMSD, RMSF, Rg,
 H-bonds, contacts) are in `md_simulation/MD-Analysis/`.
 
 ---
@@ -193,8 +193,7 @@ The current `results/tables/submission.csv` contains 6 candidate sequences
   `data/external/README.md`.
 - One target-temperature inconsistency exists in the source material: the
   competition assay is described at **72 °C**, while the MD stress protocol uses
-  **79 °C / 352.15 K**. These are different conditions (experimental assay vs.
-  in-silico stress test); confirm and state both explicitly in any write-up.
+  **72 °C. These are conditions that confirm and state both explicitly in any write-up.
 
 ---
 
