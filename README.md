@@ -67,13 +67,8 @@ github-upload/
 │
 ├── models/                    ← trained model artifact (best_model.pkl)
 │
-├── results/
-│   ├── figures/               ← plots and rendered structures (PNG)
-│   ├── tables/                ← submission.csv, CV reports, predictions, designed sequences
-│   └── reports/               ← design rationale, validation plan, slide decks
-│
 ├── structures/
-│   ├── reference/             ← reference crystal (2B3P), chromophore (CRO), reference GFP
+│   ├── reference/             ← reference crystal (2B3P),
 │   ├── alphafold3/            ← AF3 predicted models (.cif) + confidence summaries (gfp_1…gfp_6)
 │   └── prepared/              ← per-candidate prepared PDBs for MD (GFP-0…GFP-6)
 │
