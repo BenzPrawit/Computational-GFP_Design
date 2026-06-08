@@ -1,4 +1,4 @@
-# SynBio 2026 — Computational GFP Design (ML → AlphaFold → AMBER MD)
+# SynBio 2026 - Computational GFP Design (ML > AlphaFold > AMBER MD)
 
 A reproducible computational pipeline for designing and prioritising green
 fluorescent protein (GFP) variants for the **SynBio 2026 Challenge**. The
